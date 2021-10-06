@@ -1,0 +1,41 @@
+
+public class Solution {
+
+	public static void printSubstrings(String str) {
+		//Your code goes here
+            int j=0;
+            while(j<str.length()){
+                int k=j;
+                String str1="";
+                while(k<str.length()){
+                	str1=str1+str.charAt(k);
+                    System.out.println(str1);
+                    k=k+1;
+                }
+                j=j+1;
+            }
+	}
+
+}
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+public class Runner {
+
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		String str = br.readLine();
+		if (str != null) {
+			str = str.trim();
+		} else {
+			str = "";
+		}
+
+		Solution.printSubstrings(str);
+		
+	}
+}
