@@ -1,0 +1,101 @@
+
+public class Solution {
+
+	public static void findLargest(int mat[][]){
+		//Your code goes here
+        int i=0;
+        int max=Integer.MIN_VALUE;
+        int store=0;
+        int m=mat.length;
+           if(m == 0){
+            System.out.println("row "+i+" "+max);
+            return;
+        }
+        int n=mat[0].length;
+       
+        while(i<mat.length){
+            int j=0;
+            int sum=0;
+            while(j<mat[i].length){
+                sum=sum+mat[i][j];
+                j=j+1;
+            }
+            if(max<sum){
+                store=i;
+                max=sum;
+            }
+            i=i+1;
+        }
+        int store1=0;
+        int max1=0;
+        int j=0;
+        while(j<mat[0].length){
+            int k=0;
+            int sum=0;
+            while(k<mat.length){
+                sum=sum+mat[k][j];
+                k=k+1;
+            }
+            if(max1<sum){
+                store1=j;
+                max1=sum;
+            }
+            j=j+1;
+        }
+        if(max>max1 || max==max1){
+            System.out.print("row "+store+" "+max);
+        }
+        else if(max1>max){
+            System.out.print("column "+store1+" "+max1);
+        }
+	}
+
+}
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Runner {
+
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    
+    public static int[][] take2DInput() throws IOException {
+        String[] strRowsCols = br.readLine().trim().split("\\s");
+        int n_rows = Integer.parseInt(strRowsCols[0]);
+        int m_cols = Integer.parseInt(strRowsCols[1]);
+
+        if (n_rows == 0) {
+            return new int[0][0];
+        }
+
+
+        int[][] mat = new int[n_rows][m_cols];
+
+        for (int row = 0; row < n_rows; row++) {
+            String[] strNums; 
+            strNums = br.readLine().trim().split("\\s");
+            
+            for (int col = 0; col < m_cols; col++) {
+                mat[row][col] = Integer.parseInt(strNums[col]);
+            }
+        }
+
+        return mat;
+    }
+
+
+    public static void main(String[] args) throws NumberFormatException, IOException {
+        int t = Integer.parseInt(br.readLine().trim());
+
+        while(t > 0) {
+
+            int[][] mat = take2DInput();
+
+            Solution.findLargest(mat);
+            System.out.println();
+
+            t -= 1;
+        }
+    }
+}
