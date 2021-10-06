@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+using namespace std;
+int main()
+{
+  int test_case;
+  cin>>test_case;
+  int i=0;
+  while(i<test_case){
+    int n;
+    int k;
+    cin>>n;
+    cin>>k;
+    int j=0;
+    int res=-1;
+    bool found=true;
+    while(j<n){
+      int ele;
+      cin>>ele;
+      if(ele==k && found==true){
+        res=j;
+        found=false;
+      }
+      j=j+1;
+    }
+    cout<<res<<endl;
+    i=i+1;
+  }
+   return 0;
+}
