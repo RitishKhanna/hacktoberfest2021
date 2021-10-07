@@ -1,4 +1,11 @@
 # Hacktoberfest 2021
+![Hacktoberfest 2021](hacktoberfest2021.png)
+
+<p align="center">
+   <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/ritishkhanna/hacktoberfest2021"></a>
+   <img alt="GitHub forks" src="https://img.shields.io/github/forks/ritishkhanna/hacktoberfest2021"></a>
+   <img alt="GitHub stars" src="https://img.shields.io/github/stars/ritishkhanna/hacktoberfest2021"></a>
+</p>
 
 # Upload Different Types of Programs in any Language
 Use this project to make your first contribution to an open source project on GitHub. Practice making your first pull request to a public repository before doing the real thing!
