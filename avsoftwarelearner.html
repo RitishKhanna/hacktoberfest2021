@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome To Registration Form</title>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+                <span class="ml-3 text-xl">HealthLine</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+                <a href="about.html" class="mr-5 hover:text-gray-900">About</a>
+                <a href="contact.html" class="mr-5 hover:text-gray-900">Contact Us</a>
+            </nav>
+
+        </div>
+    </header>
+    <!-- Main div code -->
+    <div id="main">
+        <!-- create account div -->
+        <div class="login">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+                <tr>
+                    <td align="right">Enter Name :</td>
+                    <td><input type="text" placeholder="Enter user here" id="t1" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Email ID :</td>
+                    <td><input type="text" placeholder="Enter Email ID here" id="t2" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Username :</td>
+                    <td><input type="text" placeholder="Enter Username here" id="t3" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Password :</td>
+                    <td><input type="password" placeholder="Enter Password here" id="t4" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Confirm Password :</td>
+                    <td><input type="password" placeholder="Enter Password here" id="t5" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="reset" value="Clear Form" onclick="clearFunc()" id="res" class="btn" />
+                        <input type="submit" value="Create Account" class="btn" onclick="registration()" /></td>
+                </tr>
+            </table>
+        </div>
+        <!-- create account box ending here.. -->
+    </div>
+    <!-- Main div ending here... -->
+<!-- made by avsoftwareleaner (Arnav Verma) for hacktoberfest 2021 -->
+</body>
+
+</html>
